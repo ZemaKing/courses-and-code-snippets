@@ -36,6 +36,16 @@
         letter-spacing: .5px;
         line-height: 23px;
       }
+
+      .code-block {
+        background-color: #F5F8FA;
+        margin: 10px 0px;
+        padding: 10px 20px;
+      }
+
+      .code-block p {
+        color: #0c5176 !important;
+      }
     </style>
   </head>
   <body class="mb-5">
@@ -433,8 +443,398 @@
   </div>
 </div>
 
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
 
-    <!-- Optional JavaScript -->
+
+<h2 style="color: white; background: #314D5E; padding: 5px;">
+  Jenkins, From Zero To Hero: Become a DevOps Jenkins Master
+</h2>
+
+<div>
+  <span class="badge badge-warning">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps;" href="https://github.com/ricardoandre97/jenkins-resources">
+    Online repository
+  </a>
+  </span>
+</div>
+
+<p>The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.</p>
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://www.virtualbox.org/wiki/Downloads">
+    Download VirtualBox for Windows
+  </a>
+  </span>
+</div>
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="http://mirror.etf.bg.ac.rs/centos/7.8.2003/isos/x86_64/">
+    Mirror link for CentOS-7 Minimal
+  </a>
+  </span>
+</div>
+
+
+<p>Pomocu VirtualBox-a napraviti novu instancu za Linux i RedHat_64. U install wizard-u sam ici na next. Alocirati 2GB RAM memorije. Za kreiranje Virtual Hard Disk-a staviti 20GB memorije</p>
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Create virtual machine</h5>
+        <img src="./screenshots/jenkins/1_create_virtual_machine.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Set RAM size</h5>
+        <img src="./screenshots/jenkins/2_set_ram_size.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Create virtual hard disk</h5>
+        <img src="./screenshots/jenkins/3_create_virtual_hard_disk.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Setup Network Adapter</h5>
+        <img src="./screenshots/jenkins/4_setup_network_adapter.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Nakon pokretanja na Start dugme, odabrati CentOS ISO fajl. Na sledecem screen-u odabrati opciju Instal CentOS</p>
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Install CentOS</h5>
+        <img src="./screenshots/jenkins/5_install_centos.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Choose language</h5>
+        <img src="./screenshots/jenkins/6_choose_language.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Installation destination</h5>
+        <img src="./screenshots/jenkins/7_installation_destination.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Turn on Ethernet adapter</h5>
+        <img src="./screenshots/jenkins/8_turn_on_ethernet_adapter_under_network.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Craete root password</h5>
+        <img src="./screenshots/jenkins/9_create_root_password.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Create user</h5>
+        <img src="./screenshots/jenkins/10_create_user.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Login with Jenkisn user</h5>
+        <img src="./screenshots/jenkins/11_login_with_created_user.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Check IP address</h5>
+        <img src="./screenshots/jenkins/12_check_ip_address.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div>
+  <span class="badge badge-warning">Download and install:
+    <a style="text-transform: lowercase; font-variant: small-caps;" href="https://www.putty.org/">
+    Putty
+  </a>
+  </span>
+</div>
+<br/>
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Craete Putty connection</h5>
+        <img src="./screenshots/jenkins/13_create_putty_connection.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Loggin with Jenkins user</h5>
+        <img src="./screenshots/jenkins/14_login_with_jenkins_user.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div>
+  <span class="badge badge-warning">Next step:
+    <a style="text-transform: lowercase; font-variant: small-caps;" href="https://docs.docker.com/engine/install/centos/">
+    Install Docker Engine on CentOS
+  </a>
+  </span>
+</div>
+<br/>
+
+<label>Run next code into Putty</label>
+<div class="note code-block">
+  <p>
+    sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+  </p>
+</div>
+
+<label>Start Docker with next command</label>
+<div class="note code-block">
+  <p>sudo systemctl start docker</p>
+</div>
+
+<label>Enabling Docker with next command</label>
+<div class="note code-block">
+  <p>sudo systemctl enable docker</p>
+</div>
+
+<label>Modify Existing user</label>
+<div class="note code-block">
+  <p>sudo usermod -aG docker jenkins</p>
+</div>
+
+<label>List existing Docker data</label>
+<div class="note code-block">
+  <p>docker ps</p>
+</div>
+<br />
+
+<div>
+  <span class="badge badge-warning">Next step:
+    <a style="text-transform: lowercase; font-variant: small-caps;" href="https://docs.docker.com/compose/install/">
+    Install Docker Compose
+  </a>
+  </span>
+</div>
+<br/>
+
+<label>Install Docker Compose with next command</label>
+<div class="note code-block">
+  <p>sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</p>
+</div>
+
+<label>Apply executable permissions to the binary</label>
+<div class="note code-block">
+  <p>sudo chmod +x /usr/local/bin/docker-compose</p>
+</div>
+
+<label>Test Docker Compose with</label>
+<div class="note code-block">
+  <p>docker-compose --version</p>
+</div>
+
+<div>
+  <span class="badge badge-warning">Next step:
+    <a style="text-transform: lowercase; font-variant: small-caps;" href="https://hub.docker.com/r/jenkins/jenkins">
+    Install Docker Compose
+  </a>
+  </span>
+</div>
+<br />
+
+<label>Download Jenkins image command</label>
+<div class="note code-block">
+  <p>docker pull jenkins/jenkins</p>
+</div>
+
+<label>List all Docker images</label>
+<div class="note code-block">
+  <p>docker images</p>
+</div>
+
+<label>Location of saved Docker images</label>
+<div class="note code-block">
+  <p>docker info | grep -i root</p>
+</div>
+
+<label>Create new directory</label>
+<div class="note code-block">
+  <p>mkdir jenkins-data</p>
+</div>
+
+<label>List its path</label>
+<div class="note code-block">
+  <p>pwd</p>
+</div>
+
+<label>List its full path</label>
+<div class="note code-block">
+  <p>ls /home/jenkins/jenkins-data</p>
+</div>
+
+<label>Create a Docker Compose file for Jenkins</label>
+<div class="note code-block">
+  <p>vi docker-compose.yml</p>
+</div>
+
+<label>Edit file with same command</label>
+<div class="note code-block">
+  <p>vi docker-compose.yml</p>
+</div>
+
+<label>Quit editor and save (write and quit)</label>
+<div class="note code-block">
+  <p>Press ESC plus</p>
+  <p>:wq</p>
+</div>
+
+<label>Create Jenkins home directory</label>
+<div class="note code-block">
+  <p>mkdir jenkins_home</p>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Edit Jenkins data file</h5>
+        <img src="./screenshots/jenkins/15_edit_jenkins_data_file.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+
+<label>Check Docker compose file</label>
+<div class="note code-block">
+  <p>mkdir jenkins_home</p>
+</div>
+
+<label>Iz foldera <strong>jenkins-data</strong> pozvati <strong>id</strong> za dobijanje ID-a Jenkins korisnika</label>
+<div class="note code-block">
+  <p>id</p>
+</div>
+
+<label>Change owner of <strong>jenkins_home</strong> folder (rekurzivno)</label>
+<div class="note code-block">
+  <p>sudo chown 1000:1000 jenkins_home -R</p>
+</div>
+
+<label>Spinup server</label>
+<div class="note code-block">
+  <p>docker compose up -d</p>
+</div>
+
+<label>Listanje servera</label>
+<div class="note code-block">
+  <p>docker ps</p>
+</div>
+
+<label>Citanje passworda iz Putty-a</label>
+<div class="note code-block">
+  <p>docker logs -f jenkins</p>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Unlock Jenkins</h5>
+        <img src="./screenshots/jenkins/16_unlock_jenkins.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Lokacija password-a</h5>
+        <img src="./screenshots/jenkins/17_jenkins_password.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Podesavanje Jenkins-a</h5>
+        <img src="./screenshots/jenkins/18_customize_jenkins.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kreiranje prvog admin korisnika</h5>
+        <img src="./screenshots/jenkins/19_create_first_admin_user.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Podesavanje Jenkins url-a</h5>
+        <img src="./screenshots/jenkins/20_setting_jenkins_url.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Jenkins-ov ready screen</h5>
+        <img src="./screenshots/jenkins/21_jenkins_ready_screen.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Azurirati <strong>hosts</strong> fajl sa adresom jenkinsa (samo adresa bez protokola) + ime</label>
+<div class="note code-block">
+  <p>10.130.9.254 jenkins.local</p>
+</div>
+
+<label>Stopiranje Docker servisa</label>
+<div class="note code-block">
+  <p>docker-compose stop</p>
+</div>
+
+<label>Starovanje Docker servisa</label>
+<div class="note code-block">
+  <p>docker-compose start</p>
+</div>
+
+
+
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
