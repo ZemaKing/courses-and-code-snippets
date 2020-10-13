@@ -44,13 +44,17 @@
       }
 
       .code-block p {
-        color: #0c5176 !important;
+        color: #0c5176;
       }
     </style>
   </head>
   <body class="mb-5">
-<h1 style="color: white; background: #29303B; text-align: center; padding: 5px 0;">Kursevi - Code snippets</h1>
-<h2 style="color: white; background: #604688; padding: 5px;">Learn Bootstrap 4 Responsive Web Development</h2>
+<h1 style="color: white; background: #29303B; text-align: center; padding: 5px 0;" class="text-center">
+  Kursevi - Code snippets
+</h1>
+<h2 style="color: white; background: #604688; padding: 5px;" class="text-center">
+  Learn Bootstrap 4 Responsive Web Development
+</h2>
 
 <div>
   <span class="badge badge-warning">Resource link:
@@ -450,9 +454,13 @@
 <hr>
 
 
-<h2 style="color: white; background: #314D5E; padding: 5px;">
+<h2 style="color: white; background: #314D5E; padding: 5px;" class="text-center">
   Jenkins, From Zero To Hero: Become a DevOps Jenkins Master
 </h2>
+
+<h4 style="color: #003E59; background: #CBE646; padding: 5px 15px;">
+  Jenkins: Introduction & Installation
+</h4>
 
 <div>
   <span class="badge badge-warning">Resource link:
@@ -830,6 +838,196 @@
 <div class="note code-block">
   <p>docker-compose start</p>
 </div>
+
+<h4 style="color: #003E59; background: #CBE646; padding: 5px 15px;">
+  Jenkins: Getting started with Jenkins
+</h4>
+
+<label>Pristupanje bash terminalu Jenkins servisa koji radi na Docker-u</label>
+<div class="note code-block">
+  <p>docker exec -ti jenkins bash</p>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pravljenje novog <strong>Job-a</strong></h5>
+        <img src="./screenshots/jenkins/22_first_job.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodavanje <strong>Build step-a</strong></h5>
+        <img src="./screenshots/jenkins/23_add_build_step.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Build script-a</h5>
+        <img src="./screenshots/jenkins/24_build_script.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pokretanje novog Job-a</h5>
+        <img src="./screenshots/jenkins/25_run_build_process.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Definisanje promenljive</h5>
+        <img src="./screenshots/jenkins/26_define_variable.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Stampanje promenljive putem bash-a</h5>
+        <img src="./screenshots/jenkins/27_output_jobs_results.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Stampanje rezultata u poseban fajl unutar Jenkins servisa</h5>
+        <img src="./screenshots/jenkins/28_output_jobs_results_through_shell.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Fajl nije dostupan u Docker-u vec u Jenkins kontejneru</h5>
+        <img src="./screenshots/jenkins/29_file_stored_in_container_not_on_docker.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pokretanje snimnjene skripte sa prosledjivanjem parametara</h5>
+        <img src="./screenshots/jenkins/30_executing_stored_script.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<p>Za dodanje dimanickih parametara JOB-u potrebno je sledece</p>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodavanje <strong>string</strong> parametra</h5>
+        <img src="./screenshots/jenkins/31_adding_string_parameter.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodavanje drugog parametra</h5>
+        <img src="./screenshots/jenkins/32_dodavanje_drugog_parametra.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Izmena skripte da cita nove parametre</h5>
+        <img src="./screenshots/jenkins/33_change_build_script_to_reads_parameters.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pokretanje skripte sa parametrima</h5>
+        <img src="./screenshots/jenkins/34_run_build_with_parameters.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<p>Za dodanje parametra sa vise opcija</p>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Definisanje parametra sa vise opcija</h5>
+        <img src="./screenshots/jenkins/35_definisanje_opcionih_parametara.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Update skripte ad cita opcioni parametar</h5>
+        <img src="./screenshots/jenkins/36_update_skripte_da_cita_opcioni_parametar.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Odabir vrednosti parametra sa vise opcija</h5>
+        <img src="./screenshots/jenkins/37_odabir_opcionog_parametra.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Obrada <strong>Boolean</strong> parametra</h5>
+        <img src="./screenshots/jenkins/38_obrada_boolean_parametra.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Testiranje scripte iz bash-a</h5>
+        <img src="./screenshots/jenkins/39_testiranje_skripte_iz_bash-a.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Definisanje <strong>Boolean</strong> parametra</h5>
+        <img src="./screenshots/jenkins/40_definisanje_boolean_parametra.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kopiranje scripte sa Docker-a na Jenkins</h5>
+        <img src="./screenshots/jenkins/41_kopiranje_skripte_sa_dockera_na_jenkins_kontejner.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Izmena Build skripte</h5>
+        <img src="./screenshots/jenkins/42_update_build_skripte.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pozivanje Build sa parametrima</h5>
+        <img src="./screenshots/jenkins/43_build_sa_parametrima.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
 
 
 
