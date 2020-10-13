@@ -49,7 +49,7 @@
     </style>
   </head>
   <body class="mb-5">
-<h1 style="color: white; background: #29303B; text-align: center; padding: 5px 0;" class="text-center">
+<h1 style="color: #CBE646; background: #29303B; text-align: center; padding: 5px 0;" class="text-center">
   Kursevi - Code snippets
 </h1>
 <h2 style="color: white; background: #604688; padding: 5px;" class="text-center">
@@ -1028,6 +1028,238 @@
   </div>
 </div>
 <br />
+
+<h4 style="color: #003E59; background: #CBE646; padding: 5px 15px;">
+  Jenkins: Jenkins & Docker
+</h4>
+
+<label>Pravimo novi Docker kontejner</label>
+<div class="note code-block">
+  <p>mkdir centos7</p>
+</div>
+<br />
+
+<label>Predjemo u taj direktorijum</label>
+<div class="note code-block">
+  <p>cd centos7/</p>
+</div>
+<br />
+
+<label>Predjemo novi image</label>
+<div class="note code-block">
+  <p>vi Dockerfile</p>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Sadrzaj nove skripte</h5>
+        <img src="./screenshots/jenkins/44_new_script_content.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Izmene za slucaj koriscenja CentOS 8</h5>
+        <img src="./screenshots/jenkins/45_izmene_za_centos_8.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Generisanje SSH kljuca</label>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Generisanje SSH kljuca</h5>
+        <img src="./screenshots/jenkins/46_generisanje_ssh_kljuca.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Rezultat generisanja kljuca</h5>
+        <img src="./screenshots/jenkins/47_rezultat_generisanje_kljuceva.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Prosirenje skripte sa novim kljucem</h5>
+        <img src="./screenshots/jenkins/48_prosirenje_skripte_sa_novim_kljucem.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Menjamo Docker Compose fajl</label>
+<br />
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pravimo novi image za remote host</h5>
+        <img src="./screenshots/jenkins/49_novi_image_za_remote_host.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Pozivamo <strong>build</strong> skriptu</label>
+<div class="note code-block">
+  <p>docker-compose build</p>
+</div>
+<br />
+
+<label>Povezujem korisnika sa Jenkins kontejnera na remote_host_ kontejner putem DNS-a iz Dockerfile-a pomocu SSH</label>
+<div class="note code-block">
+  <p>ssh remote_user@remote_host</p>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ceo proces</h5>
+        <img src="./screenshots/jenkins/50_remote_connect.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<label>Upravljanje Jenkins plugin-ovima</label>
+<br />
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Upravljanje pluginovima na Jenkinsu</h5>
+        <img src="./screenshots/jenkins/51_manage_jenkins.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Upravljanje plugin-ovima</h5>
+        <img src="./screenshots/jenkins/52_manage_plugins.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Trazenje SSH plugin-a</h5>
+        <img src="./screenshots/jenkins/53_search_for_ssh_plugin.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Restart nakon instalacije novog plugin-a</h5>
+        <img src="./screenshots/jenkins/54_restart_jenkins.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Integrisanje Docker SSH servera sa Jenkins-om</label>
+<br />
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kredencijali</h5>
+        <img src="./screenshots/jenkins/55_jenkins_credentials.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Unos kredencijala</h5>
+        <img src="./screenshots/jenkins/56_enter_credentials.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Globalni kredencijali</h5>
+        <img src="./screenshots/jenkins/57_global_credentials.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodavanje SSH kljuca</h5>
+        <img src="./screenshots/jenkins/58_add_ssh_key.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Jenkins konigurisanje</h5>
+        <img src="./screenshots/jenkins/59_key_for_remote_user.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kreiranje SSH remote host-a</h5>
+        <img src="./screenshots/jenkins/60_jenkins_configration.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kljuc za remote user-a</h5>
+        <img src="./screenshots/jenkins/61_create_ssh_remote_host.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Pokretanje Jenkins job-a na Dokerovom remote host-u putem SSH</label>
+<br />
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Parvljenje novog item-a</h5>
+        <img src="./screenshots/jenkins/62_create_new_item.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Izvrsenje shell script-e na remote host-u putem SSH</h5>
+        <img src="./screenshots/jenkins/63_execute_shell_script_on_remote_host_using_ssh.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Definisanje build skripte</h5>
+        <img src="./screenshots/jenkins/64_define_build_script.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<h4 style="color: #003E59; background: #CBE646; padding: 5px 15px;">
+  Jenkins: Jenkins & AWS
+</h4>
+
+
 
 
 
