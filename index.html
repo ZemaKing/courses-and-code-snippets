@@ -1259,6 +1259,439 @@
   Jenkins: Jenkins & AWS
 </h4>
 
+<label>Kreiranje MySQL servera na Docker-u</label>
+<br />
+<label>Prosirujemo docker-compose fajl</label>
+<br />
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://hub.docker.com/_/mysql">
+    Docker Hub MySQL
+  </a>
+  </span>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Definisanje MySQl kontejnera</h5>
+        <img src="./screenshots/jenkins/65_define_mysql_container.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Rekreiranje novog servisa</h5>
+        <img src="./screenshots/jenkins/66_recreate_new_service.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Listanje svih image-a</h5>
+        <img src="./screenshots/jenkins/67_list_all_images.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Prikaz aktivnih servisa na Docker-u</h5>
+        <img src="./screenshots/jenkins/68_prikaz_aktivnih_servisa_dockera.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pristupanje MySQL servisu</h5>
+        <img src="./screenshots/jenkins/69_pristupanje_mysql_servisu.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label style="color: #5e0087; font-weight: bold">Install MySQL Client and AWS CLI</label>
+<br />
+
+<label>Potrebno je izmeniti <strong>Dockerfile</strong> pod masinom <strong>centos7</strong></label>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Instalacija Python skripte i AWS CLI-a</h5>
+        <img src="./screenshots/jenkins/70_install_python_script_and_install_aws_cli.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Bildovanje azurirane skripte</h5>
+        <img src="./screenshots/jenkins/71_build_newly_updated_script.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Rekreiranje <strong>remote_host</strong> kontejnera</h5>
+        <img src="./screenshots/jenkins/72_must_recreate_remote_host_container.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Provera da li je sve instalirano</h5>
+        <img src="./screenshots/jenkins/73_check_for_successfull_instalation.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label style="color: #5e0087; font-weight: bold">Kreiramo novu bazu podataka nakon konektovanja na MySQL</label>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Konektovanje na bazu</h5>
+        <img src="./screenshots/jenkins/74_konektovanje_na_bazu.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Pravimo novu bazu podataka</label>
+<div class="note code-block">
+  <p>create database testdb;</p>
+</div>
+
+<label>Prelazimo na rad sa novom bazom</label>
+<div class="note code-block">
+  <p>use testdb;</p>
+</div>
+
+<label>Kreiramo novu tabelu</label>
+<div class="note code-block">
+  <p>create table info (name varchar(20), lastname varchar(20), age int(2));</p>
+</div>
+
+<label>Prikaz tabela</label>
+<div class="note code-block">
+  <p>show tables;</p>
+</div>
+
+<label>Pribavljanje informacija o novoj tabeli</label>
+<div class="note code-block">
+  <p>desc info;</p>
+</div>
+
+<label>Ubacujemo nove podatke</label>
+<div class="note code-block">
+  <p>insert into info values ('ricardo', 'gonzalez', 21);</p>
+</div>
+
+<label>Dovlacenje svih podataka iz baze</label>
+<div class="note code-block">
+  <p>select * from info;</p>
+</div>
+<br />
+
+<label style="color: #5e0087; font-weight: bold">Kreiranje S3 Bucket-a na AWS-u</label>
+<br />
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://aws.amazon.com/console/">
+    AWS Management Console
+  </a>
+  </span>
+</div>
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">AWS Welcome screen</h5>
+        <img src="./screenshots/jenkins/75_welcome_screen.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Trazimo servis S3</h5>
+        <img src="./screenshots/jenkins/76_search_for_s3.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pravimo novi <strong>Bucket</strong></h5>
+        <img src="./screenshots/jenkins/77_create_bucket.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Imenujemo novi <strong>Bucket</strong></h5>
+        <img src="./screenshots/jenkins/78_naming_new_bucket.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+
+<label>Dodavanje novog korisnika i preuzimanje kredencijala</label>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Trazimo novi servis</h5>
+        <img src="./screenshots/jenkins/79_trazimo_novi_servis.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodajemo novog korisnika</h5>
+        <img src="./screenshots/jenkins/80_dodavanje_novog_user-a.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Imeniujemo novog korisnika</h5>
+        <img src="./screenshots/jenkins/81_imenovanje_novog_korisnika.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Podesavamo dozvole</h5>
+        <img src="./screenshots/jenkins/82_podesavanje_permisija.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Prelazak na review</h5>
+        <img src="./screenshots/jenkins/83_go_to_review.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">kreiramo novog korisnika</h5>
+        <img src="./screenshots/jenkins/84_create_user.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">preuzimamo kredencijale sa AWS-a</h5>
+        <img src="./screenshots/jenkins/85_kredencijali_za_aws.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label style="color: #5e0087; font-weight: bold">
+  Upload backup-a MySQL-a na AWS S3
+</label>
+<br />
+
+<label>Dump baze podataka</label>
+<div class="note code-block">
+  <p>mysqldump -u root -h db_host -p testdb > /tmp/db.sql</p>
+</div>
+<br />
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">
+    Configuring the AWS CLI
+  </a>
+  </span>
+</div>
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html">
+    AWS environment variables
+  </a>
+  </span>
+</div>
+
+<label>Export AWS secret key</label>
+<div class="note code-block">
+  <p>export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx</p>
+</div>
+<br />
+
+<label>Export AWS secret access key</label>
+<div class="note code-block">
+  <p>export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx</p>
+</div>
+<br />
+
+<label>Export AWS secret access key</label>
+<div class="note code-block">
+  <p>export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx</p>
+</div>
+<br />
+
+<label>kopiranje podataka na AWS Bucket</label>
+<div class="note code-block">
+  <p>aws s3 cp /tmp/db.sql s3://jenkins-mysql-backup/db.sql</p>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Skripta za backup baze podataka</h5>
+        <img src="./screenshots/jenkins/86_skripta_za_backup.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Prosirenje skripte</h5>
+        <img src="./screenshots/jenkins/87_prosirenje_skripte.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label style="color: #5e0087; font-weight: bold">
+  Upravljanje osetljivim podacima na Jenkins-u (kljucevi, lozinke...)
+</label>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kreiranje kredencijala za lozinku baze podataka</h5>
+        <img src="./screenshots/jenkins/88_secret_db_password.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Kreiranje kredencijala za AWS Access key</h5>
+        <img src="./screenshots/jenkins/89_secret_key.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Prikaz rezultata za nove kredencijale</h5>
+        <img src="./screenshots/jenkins/90_rezultati.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label style="color: #5e0087; font-weight: bold">
+  Kreiranje Jenkins job-a za upload base na AWS
+</label>
+<br />
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodavanje novog job-a</h5>
+        <img src="./screenshots/jenkins/91_dodavanje_novog_joba.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Prvi parametar za host baze</h5>
+        <img src="./screenshots/jenkins/92_prvi_parametar_za_host_baze.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Drugi parametar</h5>
+        <img src="./screenshots/jenkins/93_drugi_parametar.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Treci parametar</h5>
+        <img src="./screenshots/jenkins/94_treci_parametar.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodavanje secret text-a</h5>
+        <img src="./screenshots/jenkins/95_dodavanje_secret_text-a.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Bind-ujemo secret promnljive</h5>
+        <img src="./screenshots/jenkins/96_bindovanje_secret_variabli.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Dodajemo job a egzekuciju skripte</h5>
+        <img src="./screenshots/jenkins/97_dodavanje_joba_za_egzekuciju_skripte.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pisanje komapnde</h5>
+        <img src="./screenshots/jenkins/98_pisanje_komande.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-9 col-xl-9">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Bildovanje job skripte</h5>
+        <img src="./screenshots/jenkins/99_bildovanje_skripte_joba.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Uspesno izvrsenje sa sakrivenim secret podacima</h5>
+        <img src="./screenshots/jenkins/100_secret_podaci_psolati_sa_zvezdicama.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Rezultat na AWS S3 bucket-u</h5>
+        <img src="./screenshots/jenkins/101_na_aws_s3_bucket-u_postavljen_novi_backup.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<h4 style="color: #003E59; background: #CBE646; padding: 5px 15px;">
+  Jenkins: Jenkins & Security
+</h4>
+
+
 
 
 
