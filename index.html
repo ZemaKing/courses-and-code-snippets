@@ -2186,6 +2186,227 @@ Slanje notifikacija nakon build-a
 </div>
 <br />
 
+<h4 style="color: #003E59; background: #CBE646; padding: 5px 15px;">
+  Jenkins: Jenkins & GIT
+</h4>
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://docs.gitlab.com/ee/install/requirements.html">
+    GitLab Requirements
+  </a>
+  </span>
+</div>
+
+Kreiranje Docker-ovog GitLab Servera
+<br/>
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Definisanje nogov GIT kontjnera u Docker-u</h6>
+        <img src="./screenshots/jenkins/147_definisanje_git_kontejnera_u_docker_compose_fajlu.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Startovanje docker compose up</h6>
+        <img src="./screenshots/jenkins/148_proces_nakon_docker-compose-up.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Listanje svih kontejnera</h6>
+        <img src="./screenshots/jenkins/149_prikaz_svih_kontejnera.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Azuriranje host fajla za pristup lokalnom git serveru</h6>
+        <img src="./screenshots/jenkins/150_prosirenje_hosts_fajla.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+Kreiranje nove grupe i projekta (repozitorijum)
+<br/>
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Kreiranje nove GIT grupe</h6>
+        <img src="./screenshots/jenkins/151_kreiranje_nove_git_grupe.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Kreiranje nove grupe</h6>
+        <img src="./screenshots/jenkins/152_kreiranje_nove_grupe.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Kreiranje novog projekta</h6>
+        <img src="./screenshots/jenkins/153_kreiranje_novog_projekta.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Imenovanje novog projekta</h6>
+        <img src="./screenshots/jenkins/154_imenovanje_novog_projekta.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Novi projekat je definisan</h6>
+        <img src="./screenshots/jenkins/155_definisan_novi_projekat.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+Dodavanje korisnika u GIT-u i njegovih dozvola/permisija
+<br/>
+
+<div class="col-sm-6 col-md-4 col-lg-12 col-xl-12">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Dodavanje novog GIT korisnika</h6>
+        <img src="./screenshots/jenkins/156_dodavanje_novog_git_korisnika.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Definisanje novog korisnika</h6>
+        <img src="./screenshots/jenkins/157_definisanje_novog_korinsika.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Upravljanje permisijama</h6>
+        <img src="./screenshots/jenkins/158_upravljanje_permisijama.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Dodavanje permisija</h6>
+        <img src="./screenshots/jenkins/159_dodavanje_permisija.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Rezultat dodavanja permisija</h6>
+        <img src="./screenshots/jenkins/160_rezultat_dodavanja_permisija.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<div>
+  <span class="badge badge-success">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: gold;" href="https://github.com/jenkins-docs/simple-java-maven-app">
+    Maven sample project
+  </a>
+  </span>
+</div>
+
+<label>Instaliranje GIT-a</label>
+<div class="note code-block">
+  <p>sudo yum -y install git</p>
+</div>
+
+<label>kloniranje sample projekta</label>
+<div class="note code-block">
+  <p>git clone https://github.com/jenkins-docs/simple-java-maven-app.git</p>
+</div>
+
+<label>kloniranje sample projekta</label>
+<div class="note code-block">
+  <p>git clone https://github.example.com:8090/jenkins/maven.git</p>
+  <p>git add .</p>
+  <p>git status</p>
+  <p>git commit -m "Adds maven files"</p>
+  <p>git push origin master</p>
+</div>
+
+<label>Integrisanje naseg GIT servera sa Maven JOb-om</label>
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Definisanje novog korisnika</h6>
+        <img src="./screenshots/jenkins/161_definisanje_novog_korisnika.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Povezivanje sa GIT-om</h6>
+        <img src="./screenshots/jenkins/162_povezivanje_sa_gitom.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Integrisanje naseg GIT servera sa Maven JOb-om</label>
+
+<div class="col-sm-6 col-md-4 col-lg-6 col-xl-6">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Novi direktorijum za custom-hooks</h6>
+        <img src="./screenshots/jenkins/163_novi_folder_sa_custom_hooks.png" style="width: 100%" />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Dodavanje novog fajla u novi direktorijum</h6>
+        <img src="./screenshots/jenkins/164_post-receive_fajl.png" style="width: 100%" />
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+
+<label>Izmena permisija</label>
+<div class="note code-block">
+  <p>chmod +x post-receive</p>
+</div>
+
+<label>Iz parent foldera pozivamo sledece</label>
+<div class="note code-block">
+  <p>chown git:git custom_hooks/ -R</p>
+</div>
+
+
+<div>
+  <span class="badge badge-danger">Resource link:
+    <a style="text-transform: lowercase; font-variant: small-caps; color: #FFBF00;" href="https://www.udemy.com/course/jenkins-from-zero-to-hero/learn/lecture/13142444#overview">
+    Trigerovanje Jenkins Job-a koriscenjem Git Hook
+  </a>
+  </span>
+</div>
+<br/>
 
 
 
